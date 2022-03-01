@@ -5,6 +5,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
 using WingtipToys.Models;
+using Microsoft.Owin.Security.Google;
 
 namespace WingtipToys
 {
@@ -56,11 +57,11 @@ namespace WingtipToys
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "741661612933-lsk65pjnhaog1t1vnkvb1gm5t2c52dad.apps.googleusercontent.com",
+                ClientSecret = "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"
+            });
         }
     }
 }
